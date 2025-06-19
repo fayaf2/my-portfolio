@@ -3,166 +3,789 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fayaz PM | AI Developer Portfolio</title>
+  <title>Fayaz PM | AI Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      color: #ffffff;
-      overflow-x: hidden;
     }
-
-    header {
-      text-align: center;
-      padding: 3rem 1rem 2rem;
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 0 20px #00f7ff;
-      animation: glow 2s infinite alternate;
-    }
-
-    header h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 3rem;
-      color: #00f7ff;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      opacity: 0.8;
-    }
-
-    header img {
-      width: 160px;
-      height: auto;
-      border-radius: 15px;
-      margin-bottom: 1rem;
-      box-shadow: 0 0 15px #00f7ff;
-      animation: pulse 2s infinite alternate;
-    }
-
-    @keyframes glow {
-      from { box-shadow: 0 0 10px #00f7ff; }
-      to { box-shadow: 0 0 30px #00f7ff; }
-    }
-
-    @keyframes pulse {
-      from { transform: scale(1); opacity: 0.8; }
-      to { transform: scale(1.05); opacity: 1; }
-    }
-
-    section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h2 {
-      color: #00f7ff;
-      margin-bottom: 1rem;
-      border-bottom: 1px solid #00f7ff;
-      padding-bottom: 0.5rem;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li {
-      background: rgba(255, 255, 255, 0.05);
-      margin: 0.5rem 0;
-      padding: 1rem;
-      border-left: 4px solid #00f7ff;
-      transition: background 0.3s;
-    }
-
-    ul li:hover {
-      background: rgba(0, 247, 255, 0.1);
-    }
-
-    a {
-      color: #00f7ff;
-      text-decoration: none;
-    }
-
-    .contact {
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .links a {
+    .highlight {
+      position: relative;
       display: inline-block;
-      margin: 0.5rem;
-      padding: 0.5rem 1rem;
-      border: 1px solid #00f7ff;
-      border-radius: 5px;
-      transition: all 0.3s;
     }
-
-    .links a:hover {
-      background: #00f7ff;
-      color: #000;
+    .highlight::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 8px;
+      background-color: #ec4899;
+      z-index: -1;
+      border-radius: 4px;
     }
   </style>
 </head>
-<body>
-  <header>
-    <a href="https://ibb.co/pvXpJHx"><img src="https://i.ibb.co/WWK1gr6W/FAYAZpspr.jpg" alt="FAYAZpspr"></a>
-    <h1>Fayaz PM</h1>
-    <p>AI Developer & Innovator | Open to AI Roles</p>
-  </header>
+<body class="bg-[#0f172a] text-white scroll-smooth">
 
-  <section>
-    <h2>✨ About Me</h2>
-    <p>I build AI tools, voice assistants, document analyzers, and smart devices. My goal is to make AI accessible, interactive, and impactful for everyone.</p>
-
-    <h2>🎉 Key Skills</h2>
-    <ul>
-      <li>AI/ML: TensorFlow, PyTorch, OpenCV</li>
-      <li>Speech: Twilio, Play.ht, Speech Recognition</li>
-      <li>Web Dev: Flask, JS, HTML/CSS</li>
-      <li>Cloud: AWS, Azure, GCP</li>
-      <li>Hardware: STM32, Arduino, Raspberry Pi</li>
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-8 py-5 bg-[#1e293b] shadow-md sticky top-0 z-50">
+    <h1 class="text-2xl font-bold text-pink-600">Fayaz PM</h1>
+    <ul class="flex gap-6 text-lg">
+      <li><a href="#about" class="hover:text-pink-400">About</a></li>
+      <li><a href="#skills" class="hover:text-pink-400">Skills</a></li>
+      <li><a href="#experience" class="hover:text-pink-400">Experience</a></li>
+      <li><a href="#projects" class="hover:text-pink-400">Projects</a></li>
+      <li><a href="#certifications" class="hover:text-pink-400">Certifications</a></li>
+      <li><a href="#contact" class="hover:text-pink-400">Contact</a></li>
     </ul>
+  </nav>
 
-    <h2>🚀 Projects</h2>
-    <ul>
-      <li>AI PHONE with inbuilt AI apps</li>
-      <li>Voice Assistant EVA</li>
-      <li>Helping Mode with object detection</li>
-      <li>Eyemate – Smart glasses for visually impaired</li>
-      <li>AI Shieldware – Security app on Play Store</li>
-    </ul>
+  <!-- Hero Section -->
+  <section class="flex flex-col-reverse md:flex-row items-center justify-between px-10 py-20 bg-[#0f172a]" id="home">
+    <div class="md:w-1/2">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        Welcome to my <br />
+        <span class="highlight text-pink-400">Portfolio!</span>
+      </h2>
+      <p class="text-gray-300 mb-4 leading-relaxed">
+        AI Developer, Innovator & Tech Speaker. I design AI tools, voice assistants, document analyzers, and smart devices that make technology interactive and impactful.
+      </p>
+      <span class="inline-block px-3 py-1 bg-green-200 text-black rounded-full text-sm font-semibold mb-4">
+        Python / LLM / AI Tools / Security Systems
+      </span>
+     <div class="flex gap-4 mt-6">
+  <a href="#contact" class="bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-700">Hire Me</a>
+  <a href="https://jmp.sh/s/Efw0Pi4RKHYwaFGn9jwn" target="_blank" class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700">My Resume</a>
+</div>
 
-    <h2>🚀 Innovations</h2>
-    <ul>
-      <li>AI Clothing 4U</li>
-      <li>Crime Story Website (Instagram Style)</li>
-      <li>Anonymous Article Posting Platform</li>
-    </ul>
+    </div>
+    <div class="md:w-1/2 flex justify-center mb-10 md:mb-0 relative">
+  <!-- Pink Blinking Background Shape -->
+  <div class="absolute w-[320px] h-[180px] bg-pink-600 rounded-[45%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-ping opacity-60 blur-2xl z-0"></div>
 
-    <h2>📗 Educational Projects</h2>
-    <ul>
-      <li>AI Workshops for Students</li>
-      <li>Interactive Content for Kids</li>
-    </ul>
+  <!-- Image Container -->
+  <div class="relative z-10 rounded-xl overflow-hidden">
 
-    <h2>📈 Links</h2>
-    <div class="links">
-      <a href="https://github.com/fayaf2" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/fayaz-pm" target="_blank">LinkedIn</a>
-      <a href="https://sjftech.co" target="_blank">SJF Tech</a>
-      <a href="https://exam.stthomascollege.ac.in" target="_blank">Exam Portal</a>
-      <a href="https://play.google.com/store/apps/details?id=aishieldware.app" target="_blank">Shieldware App</a>
+    <img src="https://i.ibb.co/WWK1gr6W/FAYAZpspr.jpg" alt="Fayaz PM" class="w-[300px] rounded-xl shadow-xl" />
+  </div>
+</div>
+
     </div>
   </section>
 
-  <div class="contact">
-    <h2>📧 Contact Me</h2>
-    <p>Call: +91 88482 55494</p>
-    <p>Email: fayazpm@gmail.com</p>
+  <!-- About -->
+  <!-- About Me - Enhanced Style -->
+<section id="about" class="px-10 py-16 bg-[#0f172a] text-white">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+
+    <!-- Text Side -->
+    <div class="md:w-1/2">
+      <button class="bg-blue-600 px-4 py-1 text-sm font-semibold rounded mb-4">ABOUT ME</button>
+      <h2 class="text-4xl font-bold mb-4">Hello! My name is Fayaz PM</h2>
+      <p class="text-gray-300 leading-relaxed">
+        I am a passionate AI developer building smart tools, voice assistants, and security systems. With a solid background in AI, ML, LLM, and Python, I love turning ideas into impactful tech solutions. I also deliver talks and workshops to help others learn AI and cyber safety.
+      </p>
+      <p class="text-gray-300 mt-4">
+        In my free time, I explore new AI tools, mentor students, and work on innovations that solve real-world problems. I’m always open to collaborations, learning, and new opportunities.
+      </p>
+
+      <!-- Tech Stack -->
+      <div class="mt-6">
+        <p class="text-gray-400 mb-2">Some of the stack I use:</p>
+        <div class="flex flex-wrap gap-3 text-2xl">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-10 h-10" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" class="w-10 h-10" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-10 h-10" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-10 h-10" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-10 h-10" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" class="w-10 h-10" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-10 h-10" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-10 h-10" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Image Side -->
+    <div class="md:w-1/2">
+  <img src="https://i.ibb.co/qLY0tDTT/image-2.webp" alt="Illustration" class="rounded-xl shadow-lg" />
+</div>
+
   </div>
+</section>
+
+
+ <!-- Skills -->
+<section id="skills" class="px-10 py-16 max-w-4xl mx-auto">
+  <h2 class="text-3xl font-bold text-pink-400 mb-4">🎉 Key Skills</h2>
+  <ul class="list-disc ml-6 text-gray-300 space-y-2">
+    <li>AI/ML: TensorFlow, PyTorch, OpenCV, LLM (NLP), AI Tools, ML Model Training</li>
+    <li>Speech: Twilio, Play.ht, Speech Recognition, AI Voice Cloning</li>
+    <li>Web Development: Flask, JavaScript, HTML/CSS, PHP, MySQL</li>
+    <li>App Development: Android App Building (3+ yrs)</li>
+    <li>Cloud Platforms: AWS, Azure, GCP</li>
+    <li>Languages: Python, C++, Java, PHP, HTML, MySQL, C</li>
+    <li>Cybersecurity: Ethical Hacking, Cybersecurity Training (3+ months)</li>
+    <li>Hardware: STM32, Arduino, Raspberry Pi</li>
+    <li>Design & Media: Graphic Design, Video Editing, Website Building</li>
+    <li>Tools: Power BI, Git, Canva, Figma</li>
+    <li>Soft Skills: Public Speaking, Business Development, Team Management, Creative Thinking</li>
+    <li>Other: Event Management, Teaching, Acting, Journalism</li>
+  </ul>
+</section>
+
+
+  <!-- Experience -->
+ <section id="experience" class="px-6 md:px-10 py-16 bg-[#0f172a] text-white">
+  <div class="max-w-5xl mx-auto">
+    <button class="bg-blue-700 text-sm px-4 py-1 rounded font-semibold mb-6">MY EXPERIENCE</button>
+
+    <div class="space-y-6">
+      <!-- 1 -->
+      <div class="bg-[#1e293b] p-6 rounded-lg shadow-md border-l-4 border-blue-400 relative">
+        <div class="absolute -left-6 top-6 bg-blue-500 rounded-full w-5 h-5 flex items-center justify-center">
+          <span class="text-white text-sm">✔</span>
+        </div>
+        <h3 class="text-lg font-semibold">AI Engineer – SJF Technology Pvt. Ltd. <span class="text-sm text-gray-400">(2024)</span></h3>
+        <p class="text-sm text-blue-300">AI Tools | Voice Assistants | Document Parsers</p>
+        <p class="text-gray-300 mt-2 text-sm">
+          Developed various AI solutions including secure voice interfaces, smart document analyzers, and cyber defense tools.
+        </p>
+      </div>
+
+      <!-- 2 -->
+      <div class="bg-[#1e293b] p-6 rounded-lg shadow-md border-l-4 border-blue-400 relative">
+        <div class="absolute -left-6 top-6 bg-blue-500 rounded-full w-5 h-5 flex items-center justify-center">
+          <span class="text-white text-sm">✔</span>
+        </div>
+        <h3 class="text-lg font-semibold">Intern – Secneural, Doha, Qatar <span class="text-sm text-gray-400">(2024)</span></h3>
+        <p class="text-sm text-blue-300">AI Automation | Real-Time Projects</p>
+        <p class="text-gray-300 mt-2 text-sm">
+          Hands-on experience with real-time AI projects, worked on automation pipelines and intelligent classification systems.
+        </p>
+      </div>
+
+      <!-- 3 -->
+      <div class="bg-[#1e293b] p-6 rounded-lg shadow-md border-l-4 border-blue-400 relative">
+        <div class="absolute -left-6 top-6 bg-blue-500 rounded-full w-5 h-5 flex items-center justify-center">
+          <span class="text-white text-sm">✔</span>
+        </div>
+        <h3 class="text-lg font-semibold">Graphic Designer – Brototype <span class="text-sm text-gray-400">(2023)</span></h3>
+        <p class="text-sm text-blue-300">Design | Video Editing | Branding</p>
+        <p class="text-gray-300 mt-2 text-sm">
+          Designed branding elements and edited media content for startup launches. Contributed to user-centric UI/UX material.
+        </p>
+      </div>
+
+      <!-- 4 -->
+      <div class="bg-[#1e293b] p-6 rounded-lg shadow-md border-l-4 border-blue-400 relative">
+        <div class="absolute -left-6 top-6 bg-blue-500 rounded-full w-5 h-5 flex items-center justify-center">
+          <span class="text-white text-sm">✔</span>
+        </div>
+        <h3 class="text-lg font-semibold">Motivational Speaker – Junior Chamber International <span class="text-sm text-gray-400">(2021)</span></h3>
+        <p class="text-sm text-blue-300">Tech Awareness | Public Speaking</p>
+        <p class="text-gray-300 mt-2 text-sm">
+          Delivered sessions on artificial intelligence, leadership, and cybersecurity to young innovators and students.
+        </p>
+      </div>
+
+      <!-- 5 -->
+      <div class="bg-[#1e293b] p-6 rounded-lg shadow-md border-l-4 border-blue-400 relative">
+        <div class="absolute -left-6 top-6 bg-blue-500 rounded-full w-5 h-5 flex items-center justify-center">
+          <span class="text-white text-sm">✔</span>
+        </div>
+        <h3 class="text-lg font-semibold">AI Technician – Kvartha World News <span class="text-sm text-gray-400">(2019)</span></h3>
+        <p class="text-sm text-blue-300">Media Tech | AI Tools</p>
+        <p class="text-gray-300 mt-2 text-sm">
+          Supported the creation and integration of AI-based content systems for digital journalism and media automation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Projects -->
+<!-- Projects -->
+<section id="projects" class="px-6 md:px-10 py-16 bg-[#0f172a] text-white">
+  <div class="max-w-6xl mx-auto">
+    <button class="bg-blue-700 text-sm px-4 py-1 rounded font-semibold mb-4">MY PROJECTS</button>
+    <h2 class="text-3xl font-bold mb-10">Here are some of My Projects</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- 1. AI Document Parsing System -->
+
+      <div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-md">
+        <img src="https://i.ibb.co/JT8D2WZ/2493063-Blog-AI-Document-Processing-Complete-Guide-1200-X600-OPTION-1-111224.jpg" alt="AI Document Parsing" class="w-full h-44 object-cover">
+        <div class="p-5">
+          <h3 class="text-pink-500 text-lg font-semibold mb-1">AI Document Parsing System</h3>
+          <p class="text-sm text-gray-300 mb-4">
+            An intelligent system that extracts structured data and insights from unstructured DOC/DOCX reports, including images, vulnerabilities, and metadata.
+          </p>
+          <p class="text-xs text-gray-400 mb-2">Stack</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4 text-white">
+            <span>Python</span><span>Flask</span><span>python-docx</span><span>PyWin32</span><span>OpenAI</span>
+          </div>
+          <div class="flex justify-between">
+            <a href="#" class="bg-gray-600 px-4 py-1 rounded hover:bg-gray-500">Visit</a>
+            <a href="https://github.com/fayaf2/AI-Document-Parsing" target="_blank" class="bg-black px-4 py-1 rounded hover:bg-gray-800">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+     <div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-md">
+  <img src="https://i.ibb.co/hxvDJRcP/1-ef-1-F5j-Yj-TPNPQ-3w-RJ5vg.jpg" alt="AI DOC CHAT" class="w-full h-44 object-cover">
+  <div class="p-5">
+    <h3 class="text-pink-500 text-lg font-semibold mb-1">AI DOC CHAT</h3>
+    <p class="text-sm text-gray-300 mb-4">
+      Upload documents and chat with them using AI. The system understands your questions and fetches precise answers from the content.
+    </p>
+    <p class="text-xs text-gray-400 mb-2">Stack</p>
+    <div class="flex flex-wrap gap-2 text-sm mb-4 text-white">
+      <span>Python</span><span>LangChain</span><span>OpenAI</span><span>Streamlit</span><span>PDF/DOCX Parsing</span>
+    </div>
+    <div class="flex justify-between">
+      <a href="#" class="bg-gray-600 px-4 py-1 rounded hover:bg-gray-500">Visit</a>
+      <a href="https://github.com/fayaf2/AI-DOC-CHAT" target="_blank" class="bg-black px-4 py-1 rounded hover:bg-gray-800">GitHub</a>
+    </div>
+  </div>
+</div>
+      <!-- AI Image Generator -->
+<div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-md">
+  <img src="https://i.ibb.co/xKFhrLgJ/ai-image-generator-hero-image.png" alt="AI Image Generator" class="w-full h-44 object-cover">
+  <div class="p-5">
+    <h3 class="text-pink-500 text-lg font-semibold mb-1">AI Image Generator</h3>
+    <p class="text-sm text-gray-300 mb-4">
+      A web-based AI tool that generates stunning images from text prompts using state-of-the-art deep learning models like DALL·E and Stable Diffusion.
+    </p>
+    <p class="text-xs text-gray-400 mb-2">Stack</p>
+    <div class="flex flex-wrap gap-2 text-sm mb-4 text-white">
+      <span>Python</span><span>Flask</span><span>OpenAI API</span><span>JavaScript</span><span>HTML/CSS</span>
+    </div>
+    <div class="flex justify-between">
+      <a href="#" class="bg-gray-600 px-4 py-1 rounded hover:bg-gray-500">Visit</a>
+      <a href="https://github.com/fayaf2" target="_blank" class="bg-black px-4 py-1 rounded hover:bg-gray-800">GitHub</a>
+    </div>
+  </div>
+</div>
+
+      <!-- 2. Voice Assistant EVA -->
+      <div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-md">
+        <img src="https://i.ibb.co/jvdKJstW/images.jpg" alt="Voice Assistant EVA" class="w-full h-44 object-cover">
+        <div class="p-5">
+          <h3 class="text-pink-500 text-lg font-semibold mb-1">Voice Assistant EVA</h3>
+          <p class="text-sm text-gray-300 mb-4">
+            A desktop voice assistant that understands natural commands and performs smart actions.
+          </p>
+          <p class="text-xs text-gray-400 mb-2">Stack</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4 text-white">
+            <span>Python</span><span>SpeechRecognition</span><span>Text-to-Speech</span>
+          </div>
+          <div class="flex justify-between">
+            <a href="#" class="bg-gray-600 px-4 py-1 rounded hover:bg-gray-500">Visit</a>
+            <a href="https://github.com/fayaf2/Helping-Mode" target="_blank" class="bg-black px-4 py-1 rounded hover:bg-gray-800">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Helping Mode -->
+      <div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-md">
+       <img src="https://i.ibb.co/Q3HQjXCd/Object-detection-Real-world-applications-and-benefits.png" alt="Helping Mode Detection" class="w-full h-44 object-cover">
+
+        <div class="p-5">
+          <h3 class="text-pink-500 text-lg font-semibold mb-1">Helping Mode with Object Detection</h3>
+          <p class="text-sm text-gray-300 mb-4">
+            A voice-triggered helping mode that activates real-time object detection for safety.
+          </p>
+          <p class="text-xs text-gray-400 mb-2">Stack</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4 text-white">
+            <span>YOLOv2</span><span>Python</span><span>OpenCV</span>
+          </div>
+          <div class="flex justify-between">
+            <a href="#" class="bg-gray-600 px-4 py-1 rounded hover:bg-gray-500">Visit</a>
+            <a href="https://github.com/fayaf2" target="_blank" class="bg-black px-4 py-1 rounded hover:bg-gray-800">GitHub</a>
+          </div>
+        </div>
+      </div>
+          <!-- 7. Crime Story Website -->
+<div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-md">
+  <img src="https://i.ibb.co/Rkqwky6Q/IMG-4433.jpg" alt="AI Voice Chatbot Robo" class="w-full h-44 object-cover">
+  <div class="p-5">
+    <h3 class="text-pink-500 text-lg font-semibold mb-1">AI Voice Chatbot Robo</h3>
+    <p class="text-sm text-gray-300 mb-4">
+      A personalized AI chatbot that listens and replies using a cloned human voice, powered by voice recognition and speech synthesis.
+    </p>
+    <p class="text-xs text-gray-400 mb-2">Stack</p>
+    <div class="flex flex-wrap gap-2 text-sm mb-4 text-white">
+      <span>JavaScript</span><span>HTML</span><span>CSS</span><span>Play.ht API</span><span>SpeechRecognition</span>
+    </div>
+    <div class="flex justify-between">
+      <a href="#" class="bg-gray-600 px-4 py-1 rounded hover:bg-gray-500">Visit</a>
+      <a href="https://github.com/fayaf2/Voice-Chat-bot-Robo" target="_blank" class="bg-black px-4 py-1 rounded hover:bg-gray-800">GitHub</a>
+    </div>
+  </div>
+</div>
+     <!-- 4. Eyemate -->
+<div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-md">
+  <img src="https://i.ibb.co/Fb0DpNLJ/torchit-jyoti-ai-smart-glass-for-the-visually-impaired-500x500.webp" alt="Eyemate Smart Glass" class="w-full h-44 object-cover">
+  <div class="p-5">
+    <h3 class="text-pink-500 text-lg font-semibold mb-1">Eyemate – Smart Glass</h3>
+    <p class="text-sm text-gray-300 mb-4">
+      Smart AI glasses for visually impaired users using sensors & audio output.
+    </p>
+    <p class="text-xs text-gray-400 mb-2">Stack</p>
+    <div class="flex flex-wrap gap-2 text-sm mb-4 text-white">
+      <span>Arduino</span><span>Python</span><span>Ultrasonic</span><span>Voice Output</span>
+    </div>
+    <div class="flex justify-between">
+      <a href="#" class="bg-gray-600 px-4 py-1 rounded hover:bg-gray-500">Visit</a>
+      <a href="https://github.com/fayaf2/EyeMate" target="_blank" class="bg-black px-4 py-1 rounded hover:bg-gray-800">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<!-- 5. Shieldware -->
+<div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-md">
+  <img src="https://i.ibb.co/7B9GSpW/AI-SHEILDWARE-fn-removebg-preview.png" alt="AI Shieldware" class="w-full h-44 object-cover">
+  <div class="p-5">
+    <h3 class="text-pink-500 text-lg font-semibold mb-1">AI Shieldware – Play Store App</h3>
+    <p class="text-sm text-gray-300 mb-4">
+      An Android security app with AI alerts, threat detection, and voice support.
+    </p>
+    <p class="text-xs text-gray-400 mb-2">Stack</p>
+    <div class="flex flex-wrap gap-2 text-sm mb-4 text-white">
+      <span>Android</span><span>AI APIs</span><span>AI Threat Defeneder</span>
+    </div>
+    <div class="flex justify-between">
+      <a href="https://play.google.com/store/apps/details?id=aishieldware.app" class="bg-gray-600 px-4 py-1 rounded hover:bg-gray-500">Visit</a>
+      <a href="https://play.google.com/store/apps/details?id=aishieldware.app" target="_blank" class="bg-black px-4 py-1 rounded hover:bg-gray-800">Play Store</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+       <div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-md">
+  <img src="https://i.ibb.co/4gKKt5JR/online-meetings-with-live-translation-min.webp" alt="Voice Translation During Video Call" class="w-full h-44 object-cover">
+  <div class="p-5">
+    <h3 class="text-pink-500 text-lg font-semibold mb-1">Voice Translation During Video Call</h3>
+    <p class="text-sm text-gray-300 mb-4">
+      A real-time voice translation system integrated into video calls to help users communicate across different languages seamlessly.
+    </p>
+    <p class="text-xs text-gray-400 mb-2">Stack</p>
+    <div class="flex flex-wrap gap-2 text-sm mb-4 text-white">
+      <span>WebRTC</span><span>JavaScript</span><span>Google Translate API</span><span>SpeechRecognition</span><span>Node.js</span>
+    </div>
+    <div class="flex justify-between">
+      <a href="#" class="bg-gray-600 px-4 py-1 rounded hover:bg-gray-500">Visit</a>
+      <a href="https://github.com/fayaf2" target="_blank" class="bg-black px-4 py-1 rounded hover:bg-gray-800">GitHub</a>
+    </div>
+  </div>
+</div>
+
+
+   <!-- 11. AI Food Classification -->
+<div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-md">
+  <img src="https://i.ibb.co/3JBbpkH/Application.webp" alt="AI Food Classification" class="w-full h-44 object-cover">
+  <div class="p-5">
+    <h3 class="text-pink-500 text-lg font-semibold mb-1">AI Food Classification</h3>
+    <p class="text-sm text-gray-300 mb-4">
+      A machine learning-powered system that classifies food types using image recognition and provides nutritional suggestions.
+    </p>
+    <p class="text-xs text-gray-400 mb-2">Stack</p>
+    <div class="flex flex-wrap gap-2 text-sm mb-4 text-white">
+      <span>TensorFlow</span><span>Python</span><span>OpenCV</span><span>Flask</span>
+    </div>
+    <div class="flex justify-between">
+      <a href="#" class="bg-gray-600 px-4 py-1 rounded hover:bg-gray-500">Visit</a>
+      <a href="https://github.com/fayaf2/ai-food-classification" target="_blank" class="bg-black px-4 py-1 rounded hover:bg-gray-800">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-md">
+  <img src="https://i.ibb.co/svDmPX5Y/g0-YTRh7u-RHpb-WQg-SZz62b-O050.jpg" alt="AI Chatbot" class="w-full h-44 object-cover">
+  <div class="p-5">
+    <h3 class="text-pink-500 text-lg font-semibold mb-1">AI Chatbot Assistant</h3>
+    <p class="text-sm text-gray-300 mb-4">
+      A conversational AI chatbot designed to simulate human-like responses, answer queries, and assist users with real-time information using NLP.
+    </p>
+    <p class="text-xs text-gray-400 mb-2">Stack</p>
+    <div class="flex flex-wrap gap-2 text-sm mb-4 text-white">
+      <span>Python</span><span>Flask</span><span>OpenAI API</span><span>LangChain</span><span>Streamlit</span>
+    </div>
+    <div class="flex justify-between">
+      <a href="#" class="bg-gray-600 px-4 py-1 rounded hover:bg-gray-500">Visit</a>
+      <a href="https://github.com/fayaf2/ai-chatbot/" target="_blank" class="bg-black px-4 py-1 rounded hover:bg-gray-800">GitHub</a>
+    </div>
+  </div>
+</div>
+   <!-- 9. JobFlow AI -->
+<div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-md">
+  <img src="https://i.ibb.co/gZm96DHs/ai-isnt-here-to-take-your-job-but-help-you-work-better.webp" alt="JobFlow AI" class="w-full h-44 object-cover">
+  <div class="p-5">
+    <h3 class="text-pink-500 text-lg font-semibold mb-1">JobFlow AI</h3>
+    <p class="text-sm text-gray-300 mb-4">
+      An AI-based job application system that generates resumes, matches opportunities, and supports auto-apply features.
+    </p>
+    <p class="text-xs text-gray-400 mb-2">Stack</p>
+    <div class="flex flex-wrap gap-2 text-sm mb-4 text-white">
+      <span>React</span><span>Flask</span><span>OpenAI</span><span>MongoDB</span>
+    </div>
+    <div class="flex justify-between">
+      <a href="#" class="bg-gray-600 px-4 py-1 rounded hover:bg-gray-500">Visit</a>
+      <a href="https://github.com/fayaf2/jobflow-ai" target="_blank" class="bg-black px-4 py-1 rounded hover:bg-gray-800">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<!-- 8. Anonymous Article Posting -->
+<div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-md">
+  <img src="https://i.ibb.co/4g7d1vJL/images-1.jpg" alt="Anonymous Article Platform" class="w-full h-44 object-cover">
+  <div class="p-5">
+    <h3 class="text-pink-500 text-lg font-semibold mb-1">Anonymous Article Posting Platform</h3>
+    <p class="text-sm text-gray-300 mb-4">
+      A secure web app that allows users to post articles without identity, supporting mental health & expression.
+    </p>
+    <p class="text-xs text-gray-400 mb-2">Stack</p>
+    <div class="flex flex-wrap gap-2 text-sm mb-4 text-white">
+      <span>Flask</span><span>HTML</span><span>Python</span>
+    </div>
+    <div class="flex justify-between">
+      <a href="#" class="bg-gray-600 px-4 py-1 rounded hover:bg-gray-500">Visit</a>
+      <a href="https://github.com/fayaf2/Secret-Files" target="_blank" class="bg-black px-4 py-1 rounded hover:bg-gray-800">GitHub</a>
+    </div>
+  </div>
+</div>
+       <!-- 6. AI Clothing 4U -->
+      <div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-md">
+        <img src="https://i.ibb.co/ynWr0PRZ/TE1-copy.png" alt="AI Clothing 4U" class="w-full h-44 object-cover">
+        <div class="p-5">
+          <h3 class="text-pink-500 text-lg font-semibold mb-1">AI Clothing 4U</h3>
+          <p class="text-sm text-gray-300 mb-4">
+            A personalized clothing suggestion system based on AI-driven style detection and preferences.
+          </p>
+          <p class="text-xs text-gray-400 mb-2">Stack</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4 text-white">
+            <span>AI Model</span><span>Flask</span><span>Image Analysis</span>
+          </div>
+          <div class="flex justify-between">
+            <a href="#" class="bg-gray-600 px-4 py-1 rounded hover:bg-gray-500">Visit</a>
+            <a href="https://github.com/fayaf2" target="_blank" class="bg-black px-4 py-1 rounded hover:bg-gray-800">GitHub</a>
+          </div>
+        </div>
+      </div>
+   <!-- 10. KEAM Mock Test -->
+<div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-md">
+  <img src="https://i.ibb.co/N63SgHf4/04caa353-c406-4811-969d-ab13636c7f05-CI.jpg" alt="KEAM Mock Test" class="w-full h-44 object-cover">
+  <div class="p-5">
+    <h3 class="text-pink-500 text-lg font-semibold mb-1">KEAM Mock Test Platform</h3>
+    <p class="text-sm text-gray-300 mb-4">
+      A student-friendly online platform to practice KEAM mock tests with auto scoring and question analytics.
+    </p>
+    <p class="text-xs text-gray-400 mb-2">Stack</p>
+    <div class="flex flex-wrap gap-2 text-sm mb-4 text-white">
+      <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Firebase</span>
+    </div>
+    <div class="flex justify-between">
+      <a href="#" class="bg-gray-600 px-4 py-1 rounded hover:bg-gray-500">Visit</a>
+      <a href="https://github.com/fayaf2/keam" target="_blank" class="bg-black px-4 py-1 rounded hover:bg-gray-800">GitHub</a>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="testimonials" class="px-6 md:px-10 py-16 bg-[#0f172a] text-white">
+  <div class="max-w-6xl mx-auto">
+    <button class="bg-blue-700 text-sm px-4 py-1 rounded font-semibold mb-4">TESTIMONIALS</button>
+    <h2 class="text-3xl font-bold mb-10">What People Say</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Video 1: AI Shieldware -->
+      <div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-lg">
+        <div class="relative" style="position:relative; padding-bottom:56.25%; height:0;">
+          <iframe src="https://www.youtube.com/embed/sZORu0pQ788" class="absolute top-0 left-0 w-full h-full" allowfullscreen></iframe>
+        </div>
+        <div class="p-4">
+          <h3 class="text-pink-400 font-semibold text-lg mb-1">News Coverage 1</h3>
+          <p class="text-gray-300 text-sm">AI Shieldware featured as a smart safety companion that warns users in real-time about mobile threats.</p>
+        </div>
+      </div>
+
+      <!-- Video 2: AI Shieldware -->
+      <div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-lg">
+        <div class="relative" style="position:relative; padding-bottom:56.25%; height:0;">
+          <iframe src="https://www.youtube.com/embed/V09VzwOwLis" class="absolute top-0 left-0 w-full h-full" allowfullscreen></iframe>
+        </div>
+        <div class="p-4">
+          <h3 class="text-pink-400 font-semibold text-lg mb-1">News Coverage 2</h3>
+          <p class="text-gray-300 text-sm">Media discusses how this student-made app is alerting users against Wi-Fi traps and fraud apps.</p>
+        </div>
+      </div>
+
+      <!-- Video 3: AI Shieldware -->
+      <div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-lg">
+        <div class="relative" style="position:relative; padding-bottom:56.25%; height:0;">
+          <iframe src="https://www.youtube.com/embed/ntc9g3b_JO8" class="absolute top-0 left-0 w-full h-full" allowfullscreen></iframe>
+        </div>
+        <div class="p-4">
+          <h3 class="text-pink-400 font-semibold text-lg mb-1">News Coverage 3</h3>
+          <p class="text-gray-300 text-sm">Regional reports call AI Shieldware a must-have app for students and the general public alike.</p>
+        </div>
+      </div>
+
+      <!-- Video 4: AI Shieldware -->
+      <div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-lg">
+        <div class="relative" style="position:relative; padding-bottom:56.25%; height:0;">
+          <iframe src="https://www.youtube.com/embed/dADBl_49cEs" class="absolute top-0 left-0 w-full h-full" allowfullscreen></iframe>
+        </div>
+        <div class="p-4">
+          <h3 class="text-pink-400 font-semibold text-lg mb-1">News Coverage 4</h3>
+          <p class="text-gray-300 text-sm">News anchor highlights how AI Shieldware transforms phones into protective shields with smart alerts.</p>
+        </div>
+      </div>
+
+      <!-- Video 5: Poster (AI Shieldware) -->
+      <div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-lg">
+        <a href="https://ibb.co/Qvrmf5mN" target="_blank">
+          <img src="https://i.ibb.co/GQcP0hP2/Whats-App-Image-2025-06-19-at-1-02-43-PM.jpg" alt="Poster 1" class="w-full h-64 object-cover">
+        </a>
+        <div class="p-4">
+          <h3 class="text-pink-400 font-semibold text-lg mb-1">News Poster</h3>
+          <p class="text-gray-300 text-sm">Media poster showing the buzz around AI Shieldware across student communities and local newsrooms.</p>
+        </div>
+      </div>
+
+      <!-- Video 6: AI JARVIS Robot -->
+      <div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-lg">
+        <div class="relative" style="position:relative; padding-bottom:56.25%; height:0;">
+          <iframe src="https://www.youtube.com/embed/WvWuOOA3j-Q" class="absolute top-0 left-0 w-full h-full" allowfullscreen></iframe>
+        </div>
+        <div class="p-4">
+          <h3 class="text-pink-400 font-semibold text-lg mb-1">News Coverage 5</h3>
+          <p class="text-gray-300 text-sm">Jarvis Robot Assistant was covered as a futuristic AI interface that listens and responds in real-time, developed locally.</p>
+        </div>
+      </div>
+
+      <!-- Video 7: AI JARVIS Robot -->
+      <div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-lg">
+        <div class="relative" style="position:relative; padding-bottom:56.25%; height:0;">
+          <iframe src="https://www.youtube.com/embed/rAf8nRzG-Ug" class="absolute top-0 left-0 w-full h-full" allowfullscreen></iframe>
+        </div>
+        <div class="p-4">
+          <h3 class="text-pink-400 font-semibold text-lg mb-1">News Coverage 6</h3>
+          <p class="text-gray-300 text-sm">AI Jarvis robot captured public interest as a local innovation replicating voice-command smart control like Iron Man.</p>
+        </div>
+      </div>
+
+      <!-- Video 8: Poster (Jarvis Robot) -->
+      <div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-lg">
+        <a href="https://ibb.co/M5tw7ZDN" target="_blank">
+          <img src="https://i.ibb.co/k6wbX5gc/Whats-App-Image-2025-06-19-at-1-10-53-PM.jpg" alt="Poster 2" class="w-full h-64 object-cover">
+        </a>
+        <div class="p-4">
+          <h3 class="text-pink-400 font-semibold text-lg mb-1">AI Robot Poster</h3>
+          <p class="text-gray-300 text-sm">A news-poster announcing the JARVIS AI robot project and its rising recognition in engineering circuits.</p>
+        </div>
+      </div>
+
+      <!-- Video 9: Poster (Final Poster) -->
+      <div class="bg-[#1e293b] rounded-lg overflow-hidden shadow-lg">
+        <a href="https://ibb.co/DPnL8KHf" target="_blank">
+          <img src="https://i.ibb.co/CpFWM03K/Whats-App-Image-2025-06-19-at-1-08-27-PM.jpg" alt="Poster 3" class="w-full h-64 object-cover">
+        </a>
+        <div class="p-4">
+          <h3 class="text-pink-400 font-semibold text-lg mb-1">Press Highlight Poster</h3>
+          <p class="text-gray-300 text-sm">Media appreciation poster showcasing AI innovation impact led by student Fayaz PM.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="certifications" class="bg-[#0f172a] text-white py-16 px-6 md:px-10">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold mb-10">Certifications</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <div class="bg-[#1e293b] p-5 rounded-lg shadow-md">
+        <p class="text-pink-500 font-semibold text-lg">AI-Powered Performance Ads</p>
+        <p class="text-sm text-gray-300">Google Digital Academy (Skillshop)</p>
+        <p class="text-sm text-gray-400">Issued: Oct 2024 · Expires: Oct 2025</p>
+        <p class="text-xs text-gray-400">Credential ID: 118073684</p>
+      </div>
+
+      <div class="bg-[#1e293b] p-5 rounded-lg shadow-md">
+        <p class="text-pink-500 font-semibold text-lg">Data Analysis with Python</p>
+        <p class="text-sm text-gray-300">freeCodeCamp</p>
+        <p class="text-sm text-gray-400">Issued: Oct 2024</p>
+        <p class="text-xs text-gray-400">Credential: <a href="https://freecodecamp.org/certification/FayazPM/data-analysis-with-python-v7" target="_blank" class="underline text-blue-400">View Certificate</a></p>
+      </div>
+
+      <div class="bg-[#1e293b] p-5 rounded-lg shadow-md">
+        <p class="text-pink-500 font-semibold text-lg">Power BI Certification</p>
+        <p class="text-sm text-gray-300">Issued: Oct 2024</p>
+      </div>
+
+      <div class="bg-[#1e293b] p-5 rounded-lg shadow-md">
+        <p class="text-pink-500 font-semibold text-lg">LearnTube.ai AI & Data Analytics</p>
+        <p class="text-sm text-gray-300">Issued: Oct 2024</p>
+        <p class="text-xs text-gray-400">Credential ID: DJA-B-1-536712-0</p>
+      </div>
+
+      <div class="bg-[#1e293b] p-5 rounded-lg shadow-md">
+        <p class="text-pink-500 font-semibold text-lg">Google Analytics Certification</p>
+        <p class="text-sm text-gray-300">Skillshop</p>
+        <p class="text-sm text-gray-400">Issued: Oct 2024 · Expires: Oct 2025</p>
+        <p class="text-xs text-gray-400">Credential ID: 117860009</p>
+      </div>
+
+      <div class="bg-[#1e293b] p-5 rounded-lg shadow-md">
+        <p class="text-pink-500 font-semibold text-lg">Google Generative AI</p>
+        <p class="text-sm text-gray-300">Issued: Oct 2024</p>
+        <p class="text-xs text-gray-400">Credential ID: 11931546</p>
+      </div>
+
+      <div class="bg-[#1e293b] p-5 rounded-lg shadow-md">
+        <p class="text-pink-500 font-semibold text-lg">Large Language Modeling (LLM)</p>
+        <p class="text-sm text-gray-300">Simplilearn</p>
+        <p class="text-sm text-gray-400">Issued: Nov 2024</p>
+      </div>
+
+      <div class="bg-[#1e293b] p-5 rounded-lg shadow-md">
+        <p class="text-pink-500 font-semibold text-lg">Machine Learning with Python</p>
+        <p class="text-sm text-gray-300">Cognitive Class & IBM</p>
+        <p class="text-sm text-gray-400">Issued: Oct 2024</p>
+        <p class="text-xs text-gray-400">Credential ID: 173315ec9f52466ab2cedadbf44f8c55</p>
+      </div>
+        <div class="bg-[#1e293b] p-5 rounded-lg shadow-md">
+  <p class="text-pink-500 font-semibold text-lg">AI Prompting Certificate</p>
+  <p class="text-sm text-gray-300">Dubai Future Foundation</p>
+  <p class="text-sm text-gray-400">Issued: 2024</p>
+  <p class="text-xs text-gray-400">
+    <a href="https://omp.dub.ai/certificate/jkWghZcvAPCU" target="_blank" class="underline text-blue-400">
+      View Certificate
+    </a>
+  </p>
+</div>
+
+      <div class="bg-[#1e293b] p-5 rounded-lg shadow-md">
+        <p class="text-pink-500 font-semibold text-lg">E-Commerce Level 1.1</p>
+        <p class="text-sm text-gray-300">Flipkart</p>
+        <p class="text-sm text-gray-400">Issued: Aug 2023</p>
+        <p class="text-xs text-gray-400">Credential ID: 4deb0f35-1553-47ad-a754-ebce6d672275</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="bg-[#0f172a] text-white py-16 px-6 md:px-10">
+  <div class="max-w-xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-10">Let's Connect</h2>
+    <form action="https://formsubmit.co/fayazpm4v@gmail.com" method="POST" class="space-y-6">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <input type="text" name="name" placeholder="Name" required class="w-full px-4 py-3 rounded-lg bg-[#2e2e2e] text-white focus:outline-none focus:ring-2 focus:ring-pink-500" />
+      <input type="email" name="email" placeholder="Email" required class="w-full px-4 py-3 rounded-lg bg-[#2e2e2e] text-white focus:outline-none focus:ring-2 focus:ring-pink-500" />
+      <textarea name="message" placeholder="Message" rows="5" required class="w-full px-4 py-3 rounded-lg bg-[#2e2e2e] text-white focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+
+      <button type="submit" class="w-full py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold hover:opacity-90 transition">
+        Send
+      </button>
+    </form>
+  </div>
+</section>
+
+
+  <!-- Contact -->
+<section id="foot" class="px-10 py-16 text-center">
+  <h2 class="text-3xl font-bold text-pink-400 mb-4">📧 Contact Me</h2>
+  <p class="text-gray-300 mb-2">📞 +91 8848255494</p>
+  <p class="text-gray-300 mb-4">📧 fayazpm4v@gmail.com</p>
+
+  <div class="flex justify-center gap-6 mt-4 text-white text-xl">
+    <a href="https://github.com/fayaf2" target="_blank" class="hover:text-pink-400 flex items-center gap-2">
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303
+          3.438 9.8 8.205 11.385.6.113.82-.258.82-.577
+          0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.416-4.042-1.416-.546-1.385-1.333-1.754-1.333-1.754-1.089-.744.084-.729.084-.729
+          1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.809
+          1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.467-1.332-5.467-5.93
+          0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176
+          0 0 1.005-.322 3.3 1.23a11.52 11.52 0 013.003-.403c1.02.005
+          2.045.137 3.003.403 2.28-1.552 3.285-1.23
+          3.285-1.23.645 1.653.24 2.873.12 3.176.765.84
+          1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475
+          5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015
+          3.286 0 .315.21.694.825.576C20.565 22.092
+          24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+      </svg>
+      GitHub
+    </a>
+
+    <a href="https://www.linkedin.com/in/fayaz-pm" target="_blank" class="hover:text-pink-400 flex items-center gap-2">
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88
+          0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.16
+          8.09h4.68v13.91H.16V8.09zM8.34 8.09h4.49v1.91h.06c.63-1.2
+          2.18-2.46 4.49-2.46 4.8 0 5.69 3.16 5.69 7.26v8.2H18.4v-7.27c0-1.73-.03-3.96-2.41-3.96-2.42
+          0-2.8 1.89-2.8 3.83v7.4H8.34V8.09z"/>
+      </svg>
+      LinkedIn
+    </a>
+
+    <a href="https://www.instagram.com/faya_f2" target="_blank" class="hover:text-pink-400 flex items-center gap-2">
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2.163c3.204 0 3.584.012
+          4.85.07 1.17.054 1.97.24
+          2.43.403a4.92 4.92 0 011.79 1.17 4.92 4.92 0 011.17
+          1.79c.163.46.35 1.26.403 2.43.058 1.266.07
+          1.645.07 4.85s-.012 3.584-.07
+          4.85c-.054 1.17-.24 1.97-.403 2.43a4.92
+          4.92 0 01-1.17 1.79 4.92 4.92 0 01-1.79
+          1.17c-.46.163-1.26.35-2.43.403-1.266.058-1.645.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.403a4.902
+          4.902 0 01-1.79-1.17 4.902 4.902 0 01-1.17-1.79c-.163-.46-.35-1.26-.403-2.43C2.175
+          15.747 2.163 15.368 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.43a4.902
+          4.902 0 011.17-1.79 4.902 4.902 0 011.79-1.17c.46-.163
+          1.26-.35 2.43-.403C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.736
+          0 8.332.012 7.052.07 5.766.127 4.78.3 4.01.59a7.037
+          7.037 0 00-2.55 1.64 7.037 7.037 0 00-1.64
+          2.55C-.3 5.78-.127 6.766-.07 8.052.012
+          8.332 0 8.736 0 12c0 3.264.012 3.668.07
+          4.948.057 1.286.23 2.272.52 3.042a7.04 7.04 0 001.64
+          2.55 7.04 7.04 0 002.55 1.64c.77.29 1.756.463
+          3.042.52C8.332 23.988 8.736 24 12
+          24s3.668-.012 4.948-.07c1.286-.057 2.272-.23
+          3.042-.52a7.04 7.04 0 002.55-1.64 7.04
+          7.04 0 001.64-2.55c.29-.77.463-1.756.52-3.042.058-1.28.07-1.684.07-4.948s-.012-3.668-.07-4.948c-.057-1.286-.23-2.272-.52-3.042a7.037
+          7.037 0 00-1.64-2.55 7.037 7.037 0 00-2.55-1.64c-.77-.29-1.756-.463-3.042-.52C15.668.012
+          15.264 0 12 0zM12 5.838a6.162 6.162 0 100
+          12.324A6.162 6.162 0 0012 5.838zm0
+          10.162a3.999 3.999 0 110-7.998 3.999
+          3.999 0 010 7.998zm6.406-11.845a1.44 1.44 0 100
+          2.881 1.44 1.44 0 000-2.881z"/>
+      </svg>
+      Instagram
+    </a>
+  </div>
+</section>
+
 </body>
 </html>
